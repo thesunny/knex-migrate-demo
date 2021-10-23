@@ -18,7 +18,6 @@
   },
   "scripts": {
     "## Knex": "# Knex migrations",
-    "z_knex": "MYENV=.env/dev.env ts-node --project knex/tsconfig.json ./node_modules/.bin/knex --knexfile knexfile.ts",
     "knex": "MYENV=.env/dev.env knex",
     "migrate:make": "yarn knex migrate:make",
     "migrate:up": "yarn knex migrate:up",

@@ -13,16 +13,11 @@ if (!process.env.MYENV) throw new Error(`Expected process.env.MYENV`);
 
 /**
  * Make sure TypeScript can recognize the root paths.
- *
- * NOTE:
- * This might be handled automatically in recent versions of TypeScript
  */
 
 tsConfigPathsRegister({
   baseUrl: "./",
-  paths: {
-    "~/*": ["*"],
-  },
+  paths: { "~/*": ["*"] },
 });
 
 /**
