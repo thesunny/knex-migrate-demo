@@ -1,0 +1,32 @@
+{
+  "name": "knex-migrate-demo",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.4",
+    "knex": "^0.95.11",
+    "npm-run-all": "^4.1.5",
+    "pg": "^8.7.1",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "scripts": {
+    "## Knex": "# Knex migrations",
+    "z_knex": "MYENV=.env/dev.env ts-node --project knex/tsconfig.json ./node_modules/.bin/knex --knexfile knexfile.ts",
+    "knex": "MYENV=.env/dev.env knex",
+    "migrate:make": "yarn knex migrate:make",
+    "migrate:up": "yarn knex migrate:up",
+    "migrate:down": "yarn knex migrate:down",
+    "migrate:latest": "yarn knex migrate:latest",
+    "migrate:rollback": "yarn knex migrate:rollback",
+    "migrate:list": "yarn knex migrate:list",
+    "migrate:zero": "yarn knex migrate:rollback --all",
+    "migrate:remigrate": "npm-run-all -s migrate:zero migrate:latest"
+  }
+}

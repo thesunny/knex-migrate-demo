@@ -1,0 +1,28 @@
+/**
+ * IMPORTANT:
+ *
+ * This `tsconfig.json` file needs to be here because the `migrations` need to
+ * be beneath it. This enables the migration typescript files to see the
+ * configuration here like the path mapping from `~/*` to `*`.
+ */
+{
+  "compilerOptions": {
+    "baseUrl": "..",
+    "paths": { "~/*": ["*"] },
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "types": ["jest", "node"],
+    "typeRoots": ["./node_modules/@types", "./types"]
+  },
+  "exclude": [".next", "node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}
