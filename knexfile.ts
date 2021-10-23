@@ -40,6 +40,9 @@ const knexConfig: Knex.Config = {
     stub: "knex/migration.stub",
     directory: "knex/migrations",
   },
+  seeds: {
+    directory: "knex/seeds",
+  },
 };
 
 export default knexConfig;
