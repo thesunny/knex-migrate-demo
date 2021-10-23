@@ -26,6 +26,7 @@
     "migrate:rollback": "yarn knex migrate:rollback",
     "migrate:list": "yarn knex migrate:list",
     "migrate:zero": "yarn knex migrate:rollback --all",
-    "migrate:remigrate": "npm-run-all -s migrate:zero migrate:latest"
+    "migrate:remigrate": "npm-run-all -s migrate:zero migrate:latest",
+    "seed": "yarn knex seed:run"
   }
 }
