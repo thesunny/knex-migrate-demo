@@ -2,6 +2,25 @@
 
 Before starting, probably should delete the sample `migrations/...ts` file
 
+## Setup
+
+### Install dependencies
+
+```sh
+# add dev dependencies
+yarn add --dev knex npm-run-all pg ts-node tsconfig-paths typescript @types/node @types/jest
+# add dependencies
+yarn add dotenv
+```
+
+### Setup files
+
+- Copy `knexfile.ts` to root
+- Copy `knex` dir
+- Delete sample `migrations` and `seeds` most likely
+- Make sure `.env/dev.env` has a `DATABASE_URL` or modify `knextfile.ts` to reference the db
+- Copy the `package.json` scripts section related to `knex`
+
 ## IMPORTANT! Design decisions.
 
 - `knexfile.ts` needs to be in root or the working directory changes and adding `--cwd` to change it doesn't work.
